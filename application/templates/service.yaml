@@ -11,6 +11,5 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
-  selector:
-    app: {{ include "application.fullname" . }}
+  selector:    
     {{- include "application.selectorLabels" . | nindent 4 }}
