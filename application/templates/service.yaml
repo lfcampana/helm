@@ -12,4 +12,5 @@ spec:
       protocol: TCP
       name: http
   selector:
+    app: {{ include "application.fullname" . }}
     {{- include "application.selectorLabels" . | nindent 4 }}

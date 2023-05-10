@@ -10,6 +10,7 @@ spec:
   {{- end }}
   selector:
     matchLabels:
+      app: {{ include "application.fullname" . }}
       {{- include "application.selectorLabels" . | nindent 6 }}
   template:
     metadata:
